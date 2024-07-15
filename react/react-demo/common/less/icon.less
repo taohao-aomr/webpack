@@ -1,0 +1,254 @@
+@import 'validation.less';
+@import 'mixins.less';
+
+:global {
+    // 小图标
+    [class^='icon-'],
+    [class*='icon-'] {
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: 0 0;
+        background-size: cover;
+        .inline-block();
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    //载入
+    .icon-loading {
+        background-image: url('../images/icons/loading.png');
+        width: 30 / @rem;
+        height: 30 / @rem;
+        margin: 0;
+        animation: spin 2s linear infinite;
+    }
+    .icon-loader {
+        background-image: url('../images/icons/loader.gif');
+        width: 16 / @rem;
+        height: 16 / @rem;
+    }
+    .icon-qty {
+        background-image: url('../images/icons/qty.png');
+        width: 13 / @rem;
+        height: 13 / @rem;
+    }
+    .icon-clear {
+        background-image: url('../images/icons/clear.png');
+        width: 14 / @rem;
+        height: 14 / @rem;
+    }
+    .icon-portrait-def {
+        background-image: url('../images/icons/portrait.png');
+        width: 50 / @rem;
+        height: 50 / @rem;
+    }
+    .icon-arrow-back {
+        background-image: url('../images/icons/arrow-back.png');
+        width: 16 / @rem;
+        height: 16 / @rem;
+    }
+    .icon-point {
+        background-image: url('../images/icons/point.png');
+        width: 30 / @rem;
+        height: 45 / @rem;
+    }
+    .icon-hook {
+        .inline-block();
+        width: 12 / @rem;
+        height: 20 / @rem;
+        transition: 0.5s;
+        margin: -10 / @rem 7 / @rem -10 / @rem 6 / @rem;
+        border-top: 2 / @rem solid rgb(26, 196, 226);
+        border-left: 2 / @rem solid rgb(26, 196, 226);
+        .rotate(-135deg);
+    }
+    .icon-person {
+        background-image: url('../images/icons/person.png');
+        width: 16 / @rem;
+        height: 15 / @rem;
+    }
+    .icon-vcode {
+        background-image: url('../images/icons/vcode.png');
+        width: 17 / @rem;
+        height: 19 / @rem;
+    }
+    .icon-notice {
+        background-image: url('../images/icons/notice.png');
+        width: 11 / @rem;
+        height: 11 / @rem;
+    }
+    .icon-location {
+        background-image: url('../images/icons/location.png');
+        width: 51 / @rem;
+        height: 51 / @rem;
+    }
+    .icon-menu {
+        background-image: url('../images/icons/menu.png');
+        width: 20 / @rem;
+        height: 20 / @rem;
+    }
+    .icon-warning {
+        background-image: url('../images/icons/warning.png');
+        width: 12 / @rem;
+        height: 12 / @rem;
+    }
+    .icon-up {
+        background-image: url('../images/icons/up.png');
+        width: 11 / @rem;
+        height: 7 / @rem;
+        background-size: 11 / @rem 7 / @rem;
+        background-repeat: no-repeat;
+    }
+    .icon-down {
+        background-image: url('../images/icons/down.png');
+        width: 11 / @rem;
+        height: 7 / @rem;
+        background-size: 11 / @rem 7 / @rem;
+        background-repeat: no-repeat;
+    }
+    .icon-orange-up {
+        background-image: url('../images/icons/orange-up.png');
+        width: 11 / @rem;
+        height: 7 / @rem;
+        background-size: 11 / @rem 7 / @rem;
+        background-repeat: no-repeat;
+    }
+    .icon-orange-down {
+        background-image: url('../images/icons/orange-down.png');
+        width: 11 / @rem;
+        height: 7 / @rem;
+        background-size: 11 / @rem 7 / @rem;
+        background-repeat: no-repeat;
+    }
+    .icon-arrow {
+        background-image: url('../images/icons/arrow.png');
+        width: 12 / @rem;
+        height: 12 / @rem;
+        background-size: contain;
+    }
+    .icon-arrow-right {
+        background-image: url('../images/icons/arrow-right.png');
+        width: 16 / @rem;
+        height: 16 / @rem;
+        background-size: contain;
+    }
+    .icon-arrow-up {
+        background-image: url('../images/icons/arrow-up.png');
+        width: 16 / @rem;
+        height: 16 / @rem;
+        background-size: contain;
+    }
+    .icon-question-mark {
+        background-image: url('../images/icons/question-mark.png');
+        width: 16 / @rem;
+        height: 16 / @rem;
+        background-size: contain;
+    }
+    .icon-search {
+        background-image: url('../images/icons/search.png');
+        width: 24 / @rem;
+        height: 24 / @rem;
+        background-size: contain;
+    }
+    .icon-tel {
+        background-image: url('../images/icons/tel.png');
+        width: 24 / @rem;
+        height: 24 / @rem;
+        background-size: contain;
+    }
+    .icon-edit {
+        background-image: url('../images/icons/edit.png');
+        width: 24 / @rem;
+        height: 24 / @rem;
+        background-size: contain;
+    }
+    .icon-css-arrow-up {
+        display: block;
+        width: 0;
+        height: 0;
+        border: 5 / @rem solid;
+        border-color: transparent transparent #ccc;
+    }
+    .icon-css-arrow-up-blue {
+        display: block;
+        width: 0;
+        height: 0;
+        border: 5 / @rem solid;
+        border-color: transparent transparent @color-blue;
+    }
+    .icon-css-arrow-down {
+        display: block;
+        width: 0;
+        height: 0;
+        border: 5 / @rem solid;
+        border-color: #ccc transparent transparent;
+    }
+    .icon-css-arrow-down-blue {
+        display: block;
+        width: 0;
+        height: 0;
+        border: 5 / @rem solid;
+        border-color: @color-blue transparent transparent;
+    }
+    .icon-timer {
+        background-image: url('../images/icons/icon-timer.png');
+        width: 10 / @rem;
+        height: 10 / @rem;
+        background-size: contain;
+    }
+    //404页面
+    .icon-404 {
+        background-image: url('../images/icons/icon-404.png');
+        width: 173 / @rem;
+        height: 173 / @rem;
+        background-size: contain;
+    }
+
+    .icon-nodata {
+        background-image: url('../images/icons/icon-nodata.png');
+        width: 107 / @rem;
+        height: 107 / @rem;
+        background-size: contain;
+    }
+    .icon-radio {
+        width: 25 / @rem;
+        height: 25 / @rem;
+        border: 2 / @rem solid #eee;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .icon-radio.checked {
+        border: none;
+        background-image: url('../images/icons/radio-checked.png');
+        background-size: contain;
+    }
+    // 日常推荐车源数据tag
+    .icon-recommend-tag-blue {
+        background-image: url('../images/icons/re-tag-blue.png');
+        width: 60 / @rem;
+        height: 20 / @rem;
+        background-size: contain;
+    }
+
+    // 日常推荐车源数据tag
+    .icon-recommend-tag-red {
+        background-image: url('../images/icons/re-tag-red.png');
+        width: 60 / @rem;
+        height: 20 / @rem;
+        background-size: contain;
+    }
+
+    // 日常推荐车源数据tag
+    .icon-recommend-tag-yellow {
+        background-image: url('../images/icons/re-tag-yellow.png');
+        width: 70 / @rem;
+        height: 20 / @rem;
+        background-size: contain;
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "strict": false,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+    },
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    "tests",
+    "typings",
+  ]
+}

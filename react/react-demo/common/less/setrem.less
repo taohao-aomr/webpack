@@ -1,0 +1,32 @@
+// 为了避免 common/js/setrem.js 造成因为动态设置<html>元素的font-size而造成页面抖动，预先对font-size进行设置
+
+//设计稿宽度
+@psdWidth: 375;
+
+//基准值
+@baseSize: 20;
+
+//需要适配的设备宽度, 可自行添加
+@deviceWidthList: 320px, 360px, 375px, 384px, 400px, 414px, 424px, 480px, 540px, 640px, 720px, 750px;
+
+/*
+length(@deviceWidthList)获取数组长度  
+extract(@deviceWidthList,1)获取数组序号为几的值  
+body{  
+	height: extract(@deviceWidthList,1);  
+}  
+@index指的是数组的序号,when满足这个条件 当序号要小于数组的长度  
+*/
+
+.adapterFuc(@index)when (@index<=length(@deviceWidthList)) {
+    @media (min-width: extract(@deviceWidthList, @index)) {
+        html {
+            font-size: extract(@deviceWidthList, @index) / @psdWidth* @baseSize;
+        }
+    }
+
+    .adapterFuc(@index+1);
+}
+
+//调用
+.adapterFuc(1);
